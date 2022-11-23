@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "red-hat";
+    src: url("./assets/font/RedHatText-Medium.ttf") format("opentype")
+}
+
+body {
+    font-family: 'red-hat';
+    background-image: url('./assets/bg-stars.svg'), linear-gradient(to bottom,hsl(234, 17%, 12%),hsl(235, 16%, 14%), hsl(236, 21%, 26%));
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -10;
+
+}
+
+.pattern {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-height: 200px;
+    width: 100%;
+    background-image: url('./assets/pattern-hills.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#timer-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-items: center;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.col {
+    color: white;
+    font-size: 18px;
+}
+
+h1 {
+    color: white;
+    line-height: 30px;
+    letter-spacing: 8px;
+    font-size: 20px;
+    margin: 70px 0;
+}
+
+.col-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-inline .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #2e2b44 50%, #34364f 51%);
+    color: hsl(345, 95%, 68%);
+    font-size: 45px;
+    z-index: 30;
+    font-weight: bold;
+}
+
+.word {
+    color: hsl(237, 18%, 59%);
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+    .col-inline .time {
+        width: 80px;
+        height: 80px;
+    }
+    .word {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+    .grid {
+        gap: 15px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .col-inline .time {
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+    }
+    h1 {
+        font-size: 16px;
+    }
+    .grid {
+        gap: 10px;
+    }
+}
+
+  .social-icons {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 200px;    
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .facebook {
+    background-image: url('./assets/social-icon/icon-facebook.svg');
+  }
+  .printerest {
+    background-image: url('./assets/social-icon/icon-pinterest.svg');
+  }
+  .instagram {
+    background-image: url('./assets/social-icon/icon-instagram.svg');
+  }
